@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paradise Farm — Vision Statement | Digital Animal Wellbeing &amp; Breeding Intelligence System</title>
+<style>
+  :root{
+    --ink:#1c2b22;
+    --muted:#5b6b60;
+    --accent:#2f6b3c;
+    --accent-dark:#1f4d29;
+    --paper:#fbfaf6;
+    --card:#ffffff;
+    --line:#e4e0d4;
+    --gold:#a6782c;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Georgia, 'Times New Roman', serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 32px 80px;}
+  header.hero{
+    background:linear-gradient(135deg,var(--accent-dark),var(--accent));
+    color:#fff;
+    padding:64px 32px 48px;
+    margin-bottom:48px;
+  }
+  header.hero .wrap{padding:0;max-width:900px;margin:0 auto;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.78rem;
+    color:#d9e8dc;
+    font-weight:600;
+    margin-bottom:14px;
+  }
+  h1{
+    font-size:2.35rem;
+    margin:0 0 10px;
+    font-weight:700;
+    letter-spacing:-.01em;
+  }
+  .subtitle{
+    font-size:1.1rem;
+    color:#e7f0e8;
+    font-weight:400;
+    margin:0;
+  }
+  .meta-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    margin-top:28px;
+    font-size:.85rem;
+    color:#dceadd;
+  }
+  .meta-row span strong{color:#fff;display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;opacity:.85;margin-bottom:3px;}
+
+  section{margin-bottom:44px;}
+  h2{
+    font-size:1.4rem;
+    color:var(--accent-dark);
+    border-bottom:2px solid var(--line);
+    padding-bottom:10px;
+    margin:0 0 20px;
+  }
+  p{margin:0 0 16px;font-size:1.02rem;color:var(--ink);}
+  .lead{
+    font-size:1.12rem;
+    color:var(--ink);
+    background:var(--card);
+    border-left:4px solid var(--accent);
+    padding:22px 26px;
+    border-radius:4px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04);
+  }
+  .lead strong{color:var(--accent-dark);}
+
+  .principle-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    counter-reset:principle;
+  }
+  .principle-list li{
+    counter-increment:principle;
+    position:relative;
+    padding:14px 0 14px 52px;
+    border-bottom:1px solid var(--line);
+  }
+  .principle-list li:last-child{border-bottom:none;}
+  .principle-list li::before{
+    content:counter(principle);
+    position:absolute;
+    left:0;
+    top:12px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:.95rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .principle-list b{color:var(--accent-dark);}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    background:var(--card);
+    box-shadow:0 1px 3px rgba(0,0,0,.05);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  thead th{
+    background:var(--accent-dark);
+    color:#fff;
+    text-align:left;
+    padding:12px 16px;
+    font-size:.82rem;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+  }
+  tbody td{
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    font-size:.95rem;
+    vertical-align:top;
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:nth-child(even){background:#f5f4ed;}
+  td.mod{font-weight:600;color:var(--accent-dark);white-space:nowrap;}
+  .tag{
+    display:inline-block;
+    background:#fdecea;
+    color:#b02a1f;
+    font-size:.72rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    padding:2px 8px;
+    border-radius:3px;
+    margin-left:8px;
+    vertical-align:middle;
+  }
+
+  .callout{
+    background:#eef4ea;
+    border:1px solid #cfe0c8;
+    border-radius:6px;
+    padding:20px 24px;
+    margin-top:8px;
+  }
+  .callout p{margin-bottom:0;}
+
+  .example-block{
+    background:#22301f;
+    color:#eef4ea;
+    border-radius:6px;
+    padding:18px 22px;
+    font-family:'Consolas','Courier New',monospace;
+    font-size:.88rem;
+    margin:14px 0;
+    line-height:1.5;
+    white-space:pre-wrap;
+  }
+  .example-block .flag{color:#ffb4a8;font-weight:700;}
+
+  .outcome{
+    background:var(--accent-dark);
+    color:#fff;
+    padding:34px 32px;
+    border-radius:8px;
+    text-align:center;
+  }
+  .outcome p{color:#eaf3ea;font-size:1.08rem;}
+  .outcome strong{color:#fff;}
+
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.82rem;
+    margin-top:56px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:600px){
+    header.hero{padding:44px 20px 36px;}
+    h1{font-size:1.7rem;}
+    .wrap{padding:0 18px 60px;}
+    table, thead, tbody, th, td, tr{display:block;}
+    thead{display:none;}
+    tbody tr{margin-bottom:14px;border:1px solid var(--line);border-radius:6px;}
+    tbody td{border-bottom:none;padding:8px 16px;}
+    tbody td.mod{background:var(--accent-dark);color:#fff;padding:10px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Paradise Farm &nbsp;•&nbsp; Strategic Vision</div>
+    <h1>Digital Animal Wellbeing &amp; Breeding Intelligence System</h1>
+    <p class="subtitle">A lifetime record for every animal in our Gir herd — from birth to breeding to daily wellbeing.</p>
+    <div class="meta-row">
+      <span><strong>Herd</strong>50 animals &nbsp;·&nbsp; 96% purebred Gir / 4% mixed</span>
+      <span><strong>Farming model</strong>Certified organic &nbsp;·&nbsp; Shed + open grazing</span>
+      <span><strong>Document status</strong>Vision — Version 1.0</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>Vision</h2>
+    <p class="lead">
+      Every animal at Paradise Farm will have a <strong>lifetime digital passport</strong> — a single, unbroken
+      record that follows her from birth to death, linking identity, parentage, health, nutrition, reproduction,
+      behavior, and environment into one traceable history. No observation exists in isolation; every data point
+      is tied to a unique animal, a timestamp, a location, and an accountable person.
+    </p>
+    <p>
+      The system exists not to collect numbers, but to answer one question continuously:
+      <strong>“Is this animal well, and if not, why?”</strong> It does this by watching for deviation from each
+      animal's own baseline and by connecting signals across modules — because early disease, heat stress,
+      incest risk, and welfare failure rarely show up in a single metric. They show up in the
+      <em>relationship</em> between metrics.
+    </p>
+  </section>
+
+  <section>
+    <h2>Why This Matters for Paradise Farm</h2>
+    <ul class="principle-list">
+      <li>We run a certified-organic, low-intervention system — 80% locally grown feed, balanced between shed
+        feeding and open grazing. Early, non-invasive detection (behavior, activity, rumination, tick load,
+        weight trend) is more valuable than reactive treatment, and it protects our organic certification through
+        clean medication and withdrawal records.</li>
+      <li>Grazing on open wild grass means animals move beyond controlled shade — geofencing and location
+        history are not optional; they are the safety net for a semi-free-range model.</li>
+      <li>A closed, purebred Gir breeding program is only as strong as its pedigree integrity. A single
+        undetected incestuous mating can undo years of breed improvement — this is a genetic risk control, not
+        paperwork.</li>
+      <li>Manure, dung, and urine data — tracked in a companion document — feed back into this system as an
+        early parasite and bacterial-load signal. This system is built to receive that data, not bolt it on
+        later.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Guiding Principles</h2>
+    <ol class="principle-list">
+      <li><b>One animal, one identity, forever.</b> RFID, visual tag, photograph, and GPS device are
+        cross-linked — GPS alone is never treated as identity.</li>
+      <li><b>Every record has five anchors:</b> who (staff), what (event), when, where, and which animal.
+        No anonymous entries.</li>
+      <li><b>Baseline over absolute value.</b> “Cow 027's rumination dropped 25% from her own normal” matters
+        more than a raw number in isolation.</li>
+      <li><b>Correlate, don't just log.</b> Falling activity, rumination, feed intake, and milk yield combined
+        with rising temperature is one sickness alert — not four disconnected charts.</li>
+      <li><b>Roles are separated and accountable.</b> Feeding staff, milking staff, veterinarian, and breeding
+        decisions are distinct actors — no shared logins, no blended responsibility.</li>
+      <li><b>Breeding decisions are machine-checked before they happen.</b> Pedigree relationships are validated
+        pre-mating, progressing toward full inbreeding-coefficient checks over time.</li>
+      <li><b>Compliance is automatic, not manual.</b> Milk under antibiotic withdrawal is blocked at the point of
+        milking, not caught after the fact.</li>
+      <li><b>Start practical, design for automation.</b> Manual entry is acceptable on day one — feed, weight,
+        tick counts — but every field is structured so sensors and wearables can replace manual entry later
+        without redesigning the schema.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Scope — The Record, Module by Module</h2>
+    <table>
+      <thead>
+        <tr><th>Module</th><th>Core Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="mod">Identity</td><td>RFID, ear tag, photograph, GPS device, breed, Gir conformation score.</td></tr>
+        <tr><td class="mod">Pedigree &amp; Genetics</td><td>Parentage, ancestry, inbreeding/incest alerts, future DNA verification.</td></tr>
+        <tr><td class="mod">Growth</td><td>Birth weight, daily weight, Body Condition Score, growth curve.</td></tr>
+        <tr><td class="mod">Nutrition</td><td>Feed type, quantity, and batch by preparer; water intake and quality.</td></tr>
+        <tr><td class="mod">Milk</td><td>Yield and quality, staff-punched, automatically linked to withdrawal status.</td></tr>
+        <tr><td class="mod">Health</td><td>Sickness, symptoms, body temperature, diagnosis.</td></tr>
+        <tr><td class="mod">Parasite &amp; Skin<span class="tag">New</span></td><td>Per-animal tick identification and count; external parasite load.</td></tr>
+        <tr><td class="mod">Mobility &amp; Behavior</td><td>Walking-distance min/max thresholds, rumination, lying/standing time.</td></tr>
+        <tr><td class="mod">Reproduction</td><td>Heat, mating/AI, pregnancy, and calving history.</td></tr>
+        <tr><td class="mod">Preventive Care</td><td>Vaccination, deworming, and due-date alerts.</td></tr>
+        <tr><td class="mod">Environment</td><td>Outdoor weather station plus multi-zone shed temperature and humidity; THI.</td></tr>
+        <tr><td class="mod">Operations &amp; Alerts</td><td>Staff accountability log; geofence, health, breeding, and welfare alerts.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Addition: Tick Surveillance</h2>
+    <div class="callout">
+      <p>
+        Per-animal tick identification and count is treated as a <strong>critical, first-class health signal</strong> —
+        not a side note. Tracked consistently per animal over time, it gives Paradise Farm early warning of
+        parasite load before it manifests as visible sickness, weight loss, or milk decline, and links directly
+        to the Health and Medication modules for treatment and withdrawal tracking.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Outcome</h2>
+    <p>
+      A dashboard that does not simply display fifty animals' worth of numbers, but tells the manager, in plain
+      terms, exactly where to look:
+    </p>
+    <div class="example-block"><span class="flag">⚠ INVESTIGATE — Cow 027</span>
+Activity, rumination, and milk yield are all trending down; body temperature is elevated.
+
+<span class="flag">⚠ GEOFENCE ALERT — Cow 032</span>
+Outside designated grazing area at 14:37.
+
+<span class="flag">⚠ PEDIGREE CONFLICT — Bull D × Cow B</span>
+Proposed mating flagged as close relation. Do not proceed.</div>
+    <div class="outcome">
+      <p>
+        That is the standard this system is built to meet: <strong>every critical parameter captured, every
+        animal individually understood, every risk caught before it becomes a loss.</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Paradise Farm &mdash; Digital Animal Wellbeing &amp; Breeding Intelligence System &mdash; Vision Statement, Version 1.0
+  </footer>
+
+</div>
+</body>
+</html>
